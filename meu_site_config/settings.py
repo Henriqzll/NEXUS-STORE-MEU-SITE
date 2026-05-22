@@ -128,3 +128,11 @@ STATIC_URL = 'static/'
 # CONFIGURAÇÕES DE ARQUIVOS DE MÍDIA (Para carregar as fotos dos produtos enviados no Admin)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+import os
+
+# Adicione esta linha:
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Certifique-se de que estas também existam (ajustadas para produção):
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
